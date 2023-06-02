@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid.layout {
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    height: 100%;
+}
+
+.grid.layout > div {
+    padding: 1rem;
+    border:1px solid black;
+}
+
+.grid.header {
+    grid-column: 1 / 5;
+}
+
+.grid.sidebar {
+    grid-row: 2 / 5;
+}
+
+.grid.main-content {
+    grid-row: 2 / 5;
+    grid-column: 2 / 5;
+}
