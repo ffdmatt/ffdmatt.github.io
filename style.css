@@ -3,21 +3,34 @@
 }
 
 :root {
-    --icon-width: 40px;
-    --small-icon-width: 25px;
-    --large-icon-width: 75px;
-    --large-icon-height: 75px;
+    --icon-width: 3rem;
+    --small-icon-width: 1.5rem;
+    --large-icon-width: 4rem;
+    --large-icon-height: 4rem;
 
     --background-color: #e2e8f0;
     --primary: #1992d4;
     --warning: #f0b429;
 }
 
+svg {
+    width: var(--icon-width);
+}
+
 body {
     line-height: 1.5rem;
     font-size: 16px;
     background-color: var(--background-color);
-    padding: 0 1rem;
+    margin: 0;
+}
+
+#sidebar {
+    background-color: var(--primary);
+    color: white;
+}
+
+#header {
+    background-color: white;
 }
 
 p {
@@ -99,6 +112,15 @@ span.small {
 .icon {
     width: var(--icon-width);
     height: auto;
+    fill: white;
+}
+
+#header .icon, #main-content .icon {
+    fill: black;
+}
+
+.icon.icon-search {
+    margin-top: 5px;
 }
 
 .icon.large {
@@ -107,8 +129,9 @@ span.small {
 }
 
 .icon.title {
-    width: calc(var(--icon-width) + 15px);
-    height: calc(var(--icon-width) + 15px);
+    width: calc(var(--icon-width) + 12px);
+    height: calc(var(--icon-width) + 12px);
+    margin-right: .5rem;
 }
 
 .icon.small {
@@ -149,7 +172,6 @@ span.small {
 
 .grid.layout > div {
     padding: 1rem;
-    border:1px solid black;
 }
 
 .grid.header {
@@ -166,6 +188,8 @@ span.small {
 .grid.header .grid.search-area {
     grid-template-columns: auto 4fr;
     gap: 10px;
+    align-items: center;
+    align-content: center;
 }
 
 .grid.header .grid.account-area {
